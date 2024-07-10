@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+}
+.container{
+    width:1000px;
+    height:100%;
+    overflow: hidden;
+    margin:20px auto;
+    padding: 0 50px;
+    background-color:rgb(196, 121, 9 , 0.6);
+    display: grid;
+    /* gap: 50px; */
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 1fr;
+}
+.header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* align-items: first baseline; */
+    grid-column: 1/2;
+    grid-row: 1/2;
+    align-items: baseline;
+}
+.header h1{
+    text-decoration: underline;
+}
+.header a{
+    font-size: larger;
+    text-decoration: underline;
+    color: black;
+}
+.header img{
+    width: 50px;
+    height: 50px;
+}
+.main{
+    display: grid;
+    column-gap: 25px;
+    row-gap: 40px;
+    grid-template-rows: repeat(6,400px);
+    grid-template-columns: 1fr 1fr;
+}
+.card a{
+   color: blue;
+}
+.card{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    border: 1px solid gray;
+    background-color: whitesmoke;
+    border-radius: 0.5rem;
+    padding: 30px;
+    filter: drop-shadow(0 0 0.5rem rgba(96, 31, 0, 0.9));
+}
+.card:hover{
+    transform: scale(1.07);
+}
+.name{
+    color: blue;
+    font-size: larger;
+}
+.founder{
+    color: green;
+    font-size: larger;
+}
+.microsoft{
+    grid-row: 1/2;
+    grid-column: 1/2;
+}
+.meta{
+    grid-row:2/3;
+    grid-column: 1/2;
+}
+.amazon{
+    grid-row: 3/4;
+    grid-column: 1/2;
+}
+
+.apple{
+    grid-row: 4/5;
+    grid-column: 1/2;
+}
+
+.netflix{
+    grid-row:5/6 ;
+    grid-column: 1/2;
+}
+
+.google{
+    grid-row:6/7 ;
+    grid-column:1/2 ;
+}
+
+@media screen and (max-width:952px) {
+   .main{
+    grid-template-rows: repeat(12,400px);
+    grid-template-columns: 1fr;
+   }
+   .container{
+    width: 600px;
+   }
+   .microsoft{
+    grid-row: 1/2;
+}
+.meta{
+    grid-row:3/4;
+}
+.amazon{
+    grid-row: 5/6;
+}
+
+.apple{
+    grid-row: 7/8;
+}
+
+.netflix{
+    grid-row:9/10;
+}
+
+.google{
+    grid-row:11/12 ;
+}
+}
+
